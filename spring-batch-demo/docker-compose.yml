@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  java:
+    tty: true # Enables debugging capabilities when attached to this container.
+    image: demo/java8:latest
+    ports:
+      - 8080:8080
+    extra_hosts:
+      - "zookeeper:192.168.50.16"
+      - "zookeeper2:192.168.50.16"
+      - "zookeeper3:192.168.50.16"
